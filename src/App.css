@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+div{
+  box-sizing: border-box;
+}
+.list{
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid rgb(147, 165, 152);
+}
+.black-nav{
+  display: flex;
+  background: rgb(77, 98, 82);
+  width: 100%;
+  color: white;
+  padding-left: 20px;
+}
+.App-logo{
+  height: 40vmin;
+  pointer-events: none;
+}
