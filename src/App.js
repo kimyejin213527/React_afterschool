@@ -1,39 +1,37 @@
 import logo from './logo.svg';
-import './App.css';
 import { useState } from 'react';
+import './App.css';
 
 function App() {
-  // let post = '찬실이는 복도 많지'
-
-  // document.querySelectorAll('h4')[0].innerHTML = post;
-  // let [제목1, b1] = useState('찬실이는 복도 많지');
-  // let [제목2, b2] = useState('내 서랍 속에 행복');
-  // let [제목3, b3] = useState('컴 온 컴 온');
-
-  let[제목들,b] = 
-  useState(['찬실이는 복도 많지','내 서랍 속에 행복','컴 온 컴 온']);
-
+  //let post = '찬실은복도많지!'
+  
+  let [제목들, 제목변경] = useState(['찬실은복도많지','내서랍속에행복','컴온컴온']);
+  let[like, likeAdd] = useState(1)
   return (
     <div className="App">
-      <div className='App'>
-        <div className='black-nav'>
-          <h4 style={{color : 'white',fontSize : '22px'}}>힐링영화</h4>
-        </div>
+      <div className='black-nav'>
+        <h4 style = {{color : 'white', fontSize : '22px'}}>힐링영화</h4>
       </div>
+      <button onClick={() => {
+        let copy1 = [제목들];
+        copy1[0] = '벌새';
+        copy1[0] = '벌새';
+        copy1[0] = '벌새';
+        제목변경(copy1);
+      }}>신규영화</button>
       <div className='list'>
-        <h4>{제목[0]}</h4>
+        <h4>{제목들[0]}<span onClick={() => {likeAdd(like+1)}}>❤</span>{like}</h4>
         <p>4월18일</p>
       </div>
       <div className='list'>
-        <h4>{제목[1]}</h4>
-        <p>4월19일</p>
+        <h4>{제목들[1]}<span onClick={() => {likeAdd(like+1)}}>❤</span>{like}</h4>
+        <p>4월18일</p>
       </div>
       <div className='list'>
-        <h4>{제목[2]}</h4>
-        <p>4월20일</p>
+        <h4>{제목들[2]}<span onClick={() => {likeAdd(like+1)}}>❤</span>{like}</h4>
+        <p>4월18일</p>
       </div>
     </div>
-    
   );
 }
 
